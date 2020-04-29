@@ -63,19 +63,23 @@ program.command('start <project_name>')
       }
       fs.writeFileSync(`${mainPath}/${project_name}/package.json`, JSON.stringify(json), 'utf-8')
 
-      console.log(chalk.green('Process finished...'))
       if (executor === 'yarn') {
+        shell.exec('yarn')
         console.log(
           chalk.cyan('Run'),
           chalk.green(`cd ${project_name} and yarn start:dev`),
           chalk.cyan('to initialize application')
         )
+        console.log(chalk.green('Process finished...'))
       } else {
+        shell.exec('npm i --silent')
         console.log(
           chalk.cyan('Run'),
           chalk.green(`cd ${project_name} and npm run start:dev`),
           chalk.cyan('to initialize application')
         )
+        console.log(chalk.green('Process finished...'))
+
       }
 
     }
