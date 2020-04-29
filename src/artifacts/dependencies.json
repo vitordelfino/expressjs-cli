@@ -1,0 +1,17 @@
+[
+  "app-root-path",
+  "axios",
+  "continuation-local-storage",
+  "cors",
+  "dotenv",
+  "express",
+  "express-async-errors",
+  "express-handler-errors",
+  "express-request-id",
+  "morgan-body",
+  "reflect-metadata",
+  "rimraf",
+  "winston",
+  "winston-daily-rotate-file",
+  "yup"
+]

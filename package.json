@@ -1,0 +1,35 @@
+{
+  "name": "expressjs-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "src/index.js"
+  },
+  "bin": {
+    "expressjs-cli": "src/index.js"
+  },
+  "author": "Vitor Delfino",
+  "homepage": "https://github.com/vitordelfino/expressjs-cli",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vitordelfino/expressjs-cli.git"
+  },
+  "keywords": [
+    "Express",
+    "CLI"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "@types/shelljs": "^0.8.7",
+    "chalk": "^4.0.0",
+    "commander": "^5.1.0",
+    "figlet": "^1.4.0",
+    "inquirer": "^7.1.0",
+    "path": "^0.12.7",
+    "shelljs": "^0.8.4",
+    "ts-node": "^8.9.1",
+    "typescript": "^3.8.3"
+  }
+}
