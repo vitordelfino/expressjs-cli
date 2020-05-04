@@ -3,6 +3,7 @@
 ![](https://img.shields.io/github/last-commit/vitordelfino/expressjs-cli/master)
 ![](https://img.shields.io/github/issues/vitordelfino/expressjs-cli/master)
 ![](https://img.shields.io/npm/dt/expressjs-cli)
+![](https://img.shields.io/npm/v/expressjs-cli)
 ![](https://img.shields.io/github/package-json/keywords/vitordelfino/expressjs-cli)
 
 # ExpressJs CLI (Project in progress)
