@@ -1,0 +1,19 @@
+name: PIPELINE
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@master
+      - name: Publish on NPM
+        uses: actions/setup-node@master
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
