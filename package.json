@@ -1,6 +1,6 @@
 {
   "name": "expressjs-cli",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A CLI to create a nodejs project pre configured",
   "main": "index.js",
   "scripts": {
