@@ -49,3 +49,11 @@ Some infos about created project.
 ### How to throw Errors
 
 ![Throws error](./throws.svg)
+
+## Run tests
+
+```bash
+yarn test
+or
+npm run test
+```
