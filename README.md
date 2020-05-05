@@ -8,6 +8,18 @@
 
 # ExpressJs CLI (Project in progress)
 
+A CLI to create a nodejs project pre configured
+
+## Techs
+
+- Express
+- Typescript
+- Jest
+- ESLint
+- Babel
+- Commitizen
+- Husky
+
 ## How to use
 
 > Install package globally
@@ -23,3 +35,17 @@ npm i -g expressjs-cli
 ```bash
 expressjs-cli start <project name>
 ```
+
+---
+
+## Informations
+
+Some infos about created project.
+
+### Structure
+
+![Project Structure](./project_structure.png)
+
+### How to throw Errors
+
+![Throws error](./throws.svg)
