@@ -1,7 +1,7 @@
 {
   "name": "expressjs-cli",
   "version": "1.0.9",
-  "description": "",
+  "description": "A CLI to create a nodejs project pre configured",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
