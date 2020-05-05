@@ -50,6 +50,12 @@ Some infos about created project.
 
 ![Throws error](./throws.svg)
 
+### How to use logger
+
+![Logger](./logger.svg)
+
+---
+
 ## Run tests
 
 ```bash
