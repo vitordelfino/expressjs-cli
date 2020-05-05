@@ -13,7 +13,6 @@
   "@types/jest",
   "@types/node",
   "@types/winston",
-  "@types/yup",
   "@typescript-eslint/eslint-plugin",
   "@typescript-eslint/parser",
   "babel-eslint",

@@ -54,6 +54,16 @@ Some infos about created project.
 
 ![Logger](./logger.svg)
 
+### Use Yup or class-validator to validate models
+
+- Always import "express-async-errors" when use middlewares in your routes
+
+![route.ts](./route.svg)
+
+![Hello.ts](./hello-model.svg)
+
+![HelloValidator.ts](./validation-middleware.svg)
+
 ---
 
 ## Run tests

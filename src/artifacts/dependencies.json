@@ -12,6 +12,5 @@
   "reflect-metadata",
   "rimraf",
   "winston",
-  "winston-daily-rotate-file",
-  "yup"
+  "winston-daily-rotate-file"
 ]

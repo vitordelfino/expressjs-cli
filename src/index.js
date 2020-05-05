@@ -34,10 +34,10 @@ program.command('start <project_name>')
         ]
       )
       console.log(chalk.green('Installing dev dependencies...'))
-      shell.exec(`${executor} add -D --silent ${devDependencies.join(' ')}`)
+      shell.exec(`${executor} add -D ${devDependencies.join(' ')}`)
 
       console.log(chalk.green('Installing dependencies...'))
-      shell.exec(`${executor} add --silent ${dependencies.join(' ')}`)
+      shell.exec(`${executor} add ${dependencies.join(' ')}`)
 
       console.log(chalk.green('Configuring commitizen...'))
       shell.exec(`npx commitizen init cz-conventional-changelog ${executor} --dev --exact --silent`)
@@ -67,16 +67,24 @@ program.command('start <project_name>')
         shell.exec('yarn')
         console.log(
           chalk.cyan('Run'),
-          chalk.green(`cd ${project_name} and yarn start:dev`),
-          chalk.cyan('to initialize application')
+          chalk.green(`cd`),
+          chalk.blueBright(project_name),
+          chalk.green(`and`),
+          chalk.cyan('yarn'),
+          chalk.yellow('start:dev'),
+          chalk.green('to initialize application')
         )
         console.log(chalk.green('Process finished...'))
       } else {
         shell.exec('npm i --silent')
         console.log(
           chalk.cyan('Run'),
-          chalk.green(`cd ${project_name} and npm run start:dev`),
-          chalk.cyan('to initialize application')
+          chalk.green(`cd`),
+          chalk.blueBright(project_name),
+          chalk.green(`and npm`),
+          chalk.cyan('run'),
+          chalk.yellow('start:dev'),
+          chalk.green('to initialize application')
         )
         console.log(chalk.green('Process finished...'))
 
