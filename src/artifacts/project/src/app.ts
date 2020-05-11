@@ -5,6 +5,7 @@ import { ErrorHandler } from 'express-handler-errors';
 import morgan from 'morgan-body'
 import routes from './routes';
 import logger from './middlewares/Logger';
+import 'reflect-metadata';
 
 class App {
   public readonly express: Application;

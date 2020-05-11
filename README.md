@@ -36,6 +36,44 @@ npm i -g expressjs-cli
 expressjs-cli start <project name>
 ```
 
+## Configuring after generate project
+
+You can rename all folders, files, contents that obtain "Replace" text;
+
+- src/apps/Replace (all files)
+- src/config/db/standart.connection.ts
+
+Update env files with DATABASE_URL, example below.
+
+`.env | .env.development | .env.test`
+
+```auto
+  DATABASE_URL=mongodb+srv://<username>:<password>@<host>/<database>?retryWrites=true&w=majority
+```
+
+## Generate new CRUD
+
+> Run command in root path (near package.json)
+
+```bash
+expressjs-cli crud <Model | Entity>
+```
+
+![Terminal log](./crud.png)
+
+Command will generate a new module in `src/apps` folder with:
+
+- Route
+- Validator
+- Controller
+- Service
+- Crud tests
+
+After run command updates some files;
+
+- `src/routes.ts`: import new routes from module and configure the path
+- `src/config/db/standart.connection.ts`: add new Entity on Typeorm connection
+
 ---
 
 ## Informations

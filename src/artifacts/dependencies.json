@@ -12,5 +12,9 @@
   "reflect-metadata",
   "rimraf",
   "winston",
-  "winston-daily-rotate-file"
+  "winston-daily-rotate-file",
+  "typeorm",
+  "reflect-metadata",
+  "class-validator",
+  "class-transformer"
 ]

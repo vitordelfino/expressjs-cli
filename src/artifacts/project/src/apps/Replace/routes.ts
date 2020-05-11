@@ -1,0 +1,14 @@
+import { Router } from 'express'
+import { validateReplace } from './validator'
+import * as controller from './ReplaceController';
+import 'express-async-errors';
+
+const route = Router()
+
+route.get('/', controller.list);
+route.post('/', validateReplace, controller.create);
+route.get('/:id', controller.findOne);
+route.put('/:id', controller.update);
+route.delete('/:id', controller.deleteOne);
+
+export default route;

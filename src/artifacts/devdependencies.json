@@ -12,6 +12,7 @@
   "@types/express",
   "@types/jest",
   "@types/node",
+  "@types/supertest",
   "@types/winston",
   "@typescript-eslint/eslint-plugin",
   "@typescript-eslint/parser",
@@ -25,9 +26,11 @@
   "eslint-plugin-prettier",
   "husky",
   "jest",
+  "jest-mock-extended",
   "nodemon",
   "prettier",
   "ts-jest",
   "ts-node",
-  "typescript"
+  "typescript",
+  "supertest"
 ]

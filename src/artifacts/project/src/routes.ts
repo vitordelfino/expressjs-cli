@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import helloRoute from './apps/Hello/routes';
+import replaceRoute from './apps/Replace/routes';
 
 const routes = Router();
 
-routes.use('/hello', helloRoute);
+routes.use('/replace', replaceRoute);
 
 export default routes

@@ -1,7 +1,10 @@
 import Logger from './middlewares/Logger';
 import { server } from './config/config';
+import connection from './config/db/standart.connection'
 import app from './app';
 
-app.listen(server.port, () => {
-  Logger.info('Server running', { port: server.port, mode: server.env });
+connection.then(() => {
+  app.listen(server.port, () => {
+    Logger.info('Server running', { port: server.port, mode: server.env });
+  });
 });

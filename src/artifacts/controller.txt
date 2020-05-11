@@ -1,0 +1,30 @@
+import { Request, Response } from 'express'
+import Replace from './ReplaceService'
+
+export const list = async (_: Request, res: Response) => {
+  const response = await Replace.list()
+  res.json(response);
+}
+
+export const create = async (req: Request, res: Response) => {
+  const response = await Replace.create(req.body);
+  res.json(response)
+}
+
+export const findOne = async (req: Request, res: Response) => {
+  const { id } = req.params
+  const response = await Replace.findOne(id);
+  res.json(response)
+}
+
+export const update = async (req: Request, res: Response) => {
+  const { id } = req.params
+  const response = await Replace.update(id, req.body);
+  res.json(response)
+}
+
+export const deleteOne = async (req: Request, res: Response) => {
+  const { id } = req.params
+  const response = await Replace.delete(id);
+  res.json(response)
+}
