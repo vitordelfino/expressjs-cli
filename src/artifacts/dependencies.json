@@ -8,6 +8,7 @@
   "express-async-errors",
   "express-handler-errors",
   "express-request-id",
+  "mongodb",
   "morgan-body",
   "reflect-metadata",
   "rimraf",

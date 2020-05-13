@@ -56,6 +56,13 @@ program.command('start <project_name>')
           "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
       }
+      json.resolutions = {
+        tslib: "1.11.2"
+      }
+      json.dependencies = {
+        ...json.dependencies,
+        tslib: "1.11.2"
+      }
       json.scripts = {
         "test": "NODE_ENV=test jest --detectOpenHandles --forceExit --verbose",
         "build": "rimraf dist && rimraf artifact && tsc -b && cp .env* dist",
@@ -63,7 +70,7 @@ program.command('start <project_name>')
         "start": "NODE_ENV=development ts-node src/server.ts"
       }
       fs.writeFileSync(`${mainPath}/${project_name}/package.json`, JSON.stringify(json), 'utf-8')
-
+      shell.exec("rm -rf node_modules yarn.lock package-lock.json")
       if (executor === 'yarn') {
         shell.exec('yarn')
         console.log(
