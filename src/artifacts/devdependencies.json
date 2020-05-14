@@ -29,6 +29,7 @@
   "jest-mock-extended",
   "nodemon",
   "prettier",
+  "rimraf",
   "ts-jest",
   "ts-node",
   "typescript",

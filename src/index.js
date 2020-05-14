@@ -67,7 +67,8 @@ program.command('start <project_name>')
         "test": "NODE_ENV=test jest --detectOpenHandles --forceExit --verbose",
         "build": "rimraf dist && rimraf artifact && tsc -b && cp .env* dist",
         "start:dev": "NODE_ENV=development nodemon --config nodemon.json",
-        "start": "NODE_ENV=development ts-node src/server.ts"
+        "start": "NODE_ENV=development ts-node src/server.ts",
+        "coverage": "NODE_ENV=test rimraf coverage && jest --coverage --silent --detectOpenHandles --forceExit"
       }
       fs.writeFileSync(`${mainPath}/${project_name}/package.json`, JSON.stringify(json), 'utf-8')
       shell.exec("rm -rf node_modules yarn.lock package-lock.json")
