@@ -50,4 +50,61 @@ describe('Replace Module Tests', () => {
       .send({ name: 'Replace' })
       .expect(200, { _id: '5e9dfe8bacb25e2e26c72916', name: 'Replace' });
   });
+
+  test('should update one Replace', async () => {
+    repository.update.mockResolvedValue({} as any);
+    repository.findOne.mockResolvedValue({
+      _id: '5e9dfe8bacb25e2e26c72916',
+      name: 'User',
+    });
+    await request(app)
+      .put('/replace/5e9dfe8bacb25e2e26c72916')
+      .send({ name: 'User' })
+      .expect(200, { _id: '5e9dfe8bacb25e2e26c72916', name: 'User' });
+  });
+
+  test('should return error when update one User', async () => {
+    repository.update.mockResolvedValue({} as any);
+    repository.findOne.mockResolvedValue(undefined);
+    await request(app)
+      .put('/replace/5e9dfe8bacb25e2e26c72916')
+      .send({ name: 'User' })
+      .expect(404, {
+        errors: [
+          {
+            code: 'USER_NOT_FOUND',
+            message: 'User not found',
+            status: 404,
+          },
+        ],
+      });
+  });
+
+  test('should delete one User', async () => {
+    repository.delete.mockResolvedValue({} as any);
+    repository.findOne.mockResolvedValue({
+      _id: '5e9dfe8bacb25e2e26c72916',
+      name: 'User',
+    });
+    await request(app)
+      .delete('/replace/5e9dfe8bacb25e2e26c72916')
+      .send({ name: 'User' })
+      .expect(200, { });
+  });
+
+  test('should return error when delete one User', async () => {
+    repository.findOne.mockResolvedValue(undefined);
+    await request(app)
+      .delete('/replace/5e9dfe8bacb25e2e26c72916')
+      .send({ name: 'User' })
+      .expect(404, {
+        errors: [
+          {
+            code: 'USER_NOT_FOUND',
+            message: 'User not found',
+            status: 404,
+          },
+        ],
+      });
+  });
 });
